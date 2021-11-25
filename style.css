@@ -1,0 +1,49 @@
+/*key for sticker-> windows key+ . */
+:root{
+    --speed:5;
+}
+.machine{
+    background-color: lightsalmon;
+    height: 300px;
+    width: 900px;
+    border:solid brown 3px;
+    border-radius: 10px;
+    margin:50px;
+    display:flex;
+}
+.slot{
+    background-color: beige;
+    height:250px;
+    width:250px;
+    border: solid darkcyan 2px;
+    border-radius: 10px;
+    margin:20px;
+    text-align: center;
+    font-size: 100pt;
+    line-height: 250px;
+    overflow:hidden;
+}
+.slot .value{
+    /*we have  to change display of span to inline block for animation because span is inline*/
+    display: inline-block;
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/var(--speed));
+
+}
+#inpspeed{
+    font-size: 15pt;
+    margin-left: 40px;
+}
+/*#stop{
+    background-color: bisque;
+    font-size: 30pt;
+}*/
+@keyframes slotspin{
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform:translateY(200px);
+    }
+}
