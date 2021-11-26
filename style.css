@@ -31,14 +31,8 @@
     animation-duration: calc(1s/var(--speed));
 
 }
-#inpspeed{
-    font-size: 15pt;
-    margin-left: 40px;
-}
-/*#stop{
-    background-color: bisque;
-    font-size: 30pt;
-}*/
+
+
 @keyframes slotspin{
     0%{
         transform: translateY(-200px);

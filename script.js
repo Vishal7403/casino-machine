@@ -5,6 +5,7 @@ let value3=$('#value3')
 let result=$('#result')
 let inpspeed=document.getElementById('inpspeed')
 let stop=$('#stop')
+let start=$('#start')
 let values=['😎','😂','🤣','😍','😒','😁','😆','😜']
 function getrandomvalue()
 {
@@ -49,6 +50,14 @@ stop.click(()=>{
         result.html('<h2><strong>you lost</strong></h2>')
     }
     
+})
+start.click(()=>{
+    value1.toggleClass('value')
+    value2.toggleClass('value')
+    value3.toggleClass('value')
+    updateanimation(5)
+    result.html('')
+
 })
 
 })
