@@ -6,7 +6,7 @@ let result=$('#result')
 let inpspeed=document.getElementById('inpspeed')
 let stop=$('#stop')
 let start=$('#start')
-let values=['😎','😂','🤣','😍','😒','😁','😆','😜']
+let values=['😎','😂','🤣','😍','😒','😁','😆','😜',]
 function getrandomvalue()
 {
 
@@ -35,6 +35,7 @@ inpspeed.onchange=function(event)
     document.documentElement.style.setProperty('--speed',event.target.value)
     updateanimation(event.target.value)
 }
+
 stop.click(()=>{
     clearInterval(animationid)
     value1.removeClass('value')
@@ -49,14 +50,22 @@ stop.click(()=>{
         console.log('lost')
         result.html('<h2><strong>you lost</strong></h2>')
     }
+    stop.addClass('disabled')
+    start.removeClass('disabled')
     
 })
+if(value1.hasClass('value'))
+{
+    start.addClass('disabled')
+}
 start.click(()=>{
     value1.toggleClass('value')
     value2.toggleClass('value')
     value3.toggleClass('value')
     updateanimation(5)
     result.html('')
+    stop.removeClass('disabled')
+    start.addClass('disabled')
 
 })
 
